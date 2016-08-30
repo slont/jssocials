@@ -1,4 +1,4 @@
-/*! jssocials - v1.3.1 - 2016-08-20
+/*! jssocials - v1.3.1 - 2016-08-30
 * http://js-socials.com
 * Copyright (c) 2016 Artem Tabalin; Licensed MIT */
 (function(window, $, undefined) {
@@ -449,9 +449,20 @@
             label: "Like",
             logo: "fa fa-facebook",
             shareUrl: "https://facebook.com/sharer/sharer.php?u={url}",
-            countUrl: "http://graph.facebook.com/?id={url}",
+            countUrl: "https://graph.facebook.com/?id={url}",
             getCount: function(data) {
                 return data.share && data.share.share_count || 0;
+            }
+        },
+
+        hatena: {
+            label: "Bookmark",
+            logo: "fa fa-hatena",
+            shareUrl: "http://b.hatena.ne.jp/entry/{url}",
+            countUrl: "http://api.b.st-hatena.com/entry.count?url={url}",
+            getCount: function(data) {
+                // unchecked
+                return data || 0;
             }
         },
 
@@ -516,6 +527,14 @@
             logo: "fa fa-comment",
             shareUrl: "http://line.me/R/msg/text/?{text} {url}",
             countUrl: ""
+        },
+
+        viber: {
+            label: "Viber",
+            logo: "fa fa-volume-control-phone",
+            shareUrl: "viber://forward?text={url} {text}",
+            countUrl: "",
+            shareIn: "self"
         }
 
     });
