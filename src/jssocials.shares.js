@@ -27,6 +27,17 @@
             }
         },
 
+        hatena: {
+            label: "Bookmark",
+            logo: "fa fa-hatena",
+            shareUrl: "http://b.hatena.ne.jp/entry/{url}",
+            countUrl: "http://api.b.st-hatena.com/entry.count?url={url}",
+            getCount: function(data) {
+                // unchecked
+                return data || 0;
+            }
+        },
+
         googleplus: {
             label: "+1",
             logo: "fa fa-google",
