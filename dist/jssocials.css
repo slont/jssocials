@@ -57,3 +57,10 @@ img.jssocials-share-logo {
 .jssocials-share-count {
   line-height: 1.5em;
   vertical-align: middle; }
+
+.fa-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold; }
+
+/*# sourceMappingURL=jssocials.css.map */

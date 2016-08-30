@@ -83,3 +83,12 @@ img.jssocials-share-logo {
     vertical-align: middle;
 }
 
+// Custom fa icon
+
+.fa-hatena {
+    &:before {
+        content: "B!";
+        font-family: Verdana;
+        font-weight: bold;
+    }
+}
